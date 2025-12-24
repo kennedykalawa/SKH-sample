@@ -54,6 +54,7 @@ body {
     gap: 30px;
     margin-top: 40px;
     align-items: flex-start;
+    height: 20vh;
 }
 
 /* Flex Sidebar */
@@ -63,6 +64,13 @@ body {
     padding: 20px;
     border-radius: 8px;
 }
+
+.filter-group{
+    display: flex;
+    flex-direction: column;
+
+}
+
 
 /* Flex Product Content Area */
 .main-content-flex {
@@ -119,6 +127,9 @@ body {
 .buy-btn-flex {
     background-color: #32cd32;
     margin-top: auto; /* Pushes button to the bottom of the card */
+}
+.btn-primary-flex:hover{
+    background-color: #32cd32;
 }
 
 /* Responsive Flex */
