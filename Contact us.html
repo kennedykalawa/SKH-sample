@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SokoHub - Contact Us</title>
+    <style>
+        
+        nav{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            color: white;
+            background-color: limegreen;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        img{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 50px;
+        }
+        #home, #products, #about, #contact, #in, #out{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 50px;
+        }
+        #home:focus, #products:focus, #about:focus, #contact:focus, #in:focus{
+            background-color: orangered;
+            color: white;
+        }
+        #home:hover, #products:hover, #about:hover, #contact:hover, #in:hover{
+            background-color: #d8860b;
+            color: white;
+            padding: 0;
+        }
+      
+        #in, #up{
+            width: 70px;
+            border-radius: 15px;
+            height: 40px;
+            gap: 20px;
+            padding-right: 10px;
+            border: none;
+        }
+        #up{
+            background-color: #d8860b;
+            cursor: pointer;
+        }
+        #up:hover{
+	        transform: scale(1.40);
+            transition: transform 0.3s ease;
+        }#in:hover{
+            transform: scale(1.40);
+            transition: transform 0.3s ease;
+        }
+        #buttons{
+            display: flex;
+            gap: 10px;
+        }
+        nav a{ 
+            color: white;
+            text-decoration: none;
+        }
+
+        
+        body {
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            font-family: sans-serif;
+            background-color: #f4f4f4; 
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .contact-container {
+            background-color: white;
+            padding: 40px 50px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 550px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: limegreen; 
+            margin-bottom: 10px;
+        }
+        
+        .contact-container p.lead {
+            font-size: 18px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #d8860b; 
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(216, 134, 11, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgb(43, 221, 26);
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #d8860b; 
+            transform: translateY(-1px);
+        }
+
+       
+        .contact-info {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            font-size: 24px;
+            color: rgb(252, 187, 11); 
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .contact-info a {
+            color: limegreen;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="./sokohubimg/sokohub logo.jpg" alt="">
+        <section id="logo"></section>
+        <section id="home">
+            <a href="./index.html">Home</a></section>
+        <section id="products">
+            <a href="./products.html">our products</a></section>
+        <section id="about">
+            <a href="./About.html">about us</a>
+        </section>
+        <section id="contact">
+            <a href="./Contact us.html ">contact us</a></section>
+         <section id="buttons">
+            <a href="./Register.html"><button id="up">Register</button></a>
+            <a href="./Login&Signup/login.html"><button id="in">sign in </button></a>
+        </section>
+    </nav>
+    
+    <div class="contact-container">
+        <h1>Contact SokoHub Support</h1>
+        <p class="lead">We're here to help! Send us a message or use the contact details below.</p>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required placeholder="Regarding my order, partnership, etc.">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required placeholder="Type your detailed message here..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <h2>Direct Contact</h2>
+            <p>Email: <a href="mailto:support@sokohub.com">support@sokohub.com</a></p>
+            <p>Phone: <a href="tel:+254123456789">+254 123 456 789</a></p>
+            <p style="margin-top: 15px; font-size: 14px;">Office: 123 Market Street, Kutus, Kirinyaga, Kenya</p>
+        </div>
+    </div>
+
+</body>
+</html>
