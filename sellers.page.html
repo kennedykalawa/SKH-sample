@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SokoHub | Seller Registration</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="seller.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav-menu">  
+                <img src="./sokohubimg/sokohub logo.jpg" alt="SokoHub Logo" class="logo-img">
+                <div class="nav-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./products.html">Our Products</a>
+                    <a href="./About.html">About Us</a>
+                    <a href="./Contact us.html">Contact Us</a>
+                </div>
+                <div id="buttons">
+                    <a href="./Register.html"><button id="up">Register</button></a>
+                    <a href="./Login&Signup/login.html"><button id="in">Sign In</button></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="seller-layout-flex">
+            <div class="seller-hero-text">
+                <h1><span class="soko">Soko</span><span class="hub">Hub</span> Sellers</h1>
+                <p class="lead">Join thousands of vendors growing their business online.</p>
+                <div class="benefits-flex">
+                    <p>✅ Reach thousands of customers daily.</p>
+                    <p>✅ Easy dashboard to manage your stock.</p>
+                    <p>✅ Secure payments and fast delivery.</p>
+                </div>
+            </div>
+
+            <div class="seller-form-card">
+                <h2>Create Seller Account</h2>
+                <form action="#" class="flex-form-seller">
+                    <div class="form-row-flex">
+                        <div class="input-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="e.g. John" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="e.g. Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Business Name</label>
+                        <input type="text" placeholder="e.g. J-Shop Electronics" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Category</label>
+                        <select required>
+                            <option value="">Select your niche...</option>
+                            <option>Electronics</option>
+                            <option>Fashion</option>
+                            <option>Food & Groceries</option>
+                            <option>Home & Gas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row-flex">
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Confirm Password</label>
+                            <input type="password" required>
+                        </div>
+                    </div>
+
+                    <label class="terms-label">
+                        <input type="checkbox" required> I agree to SokoHub Terms & Privacy.
+                    </label>
+
+                    <button type="submit" class="seller-submit-btn">Register as Seller</button>
+                </form>
+                <p class="sign-in-footer">Already a seller? <a href="./Login&Signup/login.html">Sign In</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
