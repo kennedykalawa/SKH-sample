@@ -48,6 +48,20 @@ body {
     gap: 10px;
 }
 
+#up, #in {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+#up { background-color: #d8860b; color: white; }
+#in { background-color: white; color: #32cd32; }
+
+#up:hover, #in:hover { transform: scale(1.1); }
+
 /* Flex Layout Main */
 .shop-layout-flex {
     display: flex;
@@ -132,6 +146,83 @@ body {
     background-color: #32cd32;
 }
 
+/* About Page Specific Flexbox Styles */
+
+.about-hero-flex {
+    text-align: center;
+    padding: 60px 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-hero-flex h1 {
+    font-size: 2.5rem;
+    color: #32cd32; /* LimeGreen from your theme */
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #d8860b; /* Orange accent */
+    font-weight: 600;
+}
+
+.about-layout-flex {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.about-text-flex {
+    flex: 1.2; /* Takes slightly more space for readability */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.values-flex {
+    background-color: #f0fdf0; /* Very light green background */
+    padding: 20px;
+    border-left: 5px solid #32cd32;
+    border-radius: 5px;
+}
+
+.values-flex h3 {
+    color: #32cd32;
+    margin-bottom: 10px;
+}
+
+.values-flex ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.values-flex li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.values-flex li::before {
+    content: "✔";
+    color: #d8860b;
+    position: absolute;
+    left: 0;
+}
+
+.about-img-flex {
+    flex: 0.8;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
 /* Responsive Flex */
 @media (max-width: 900px) {
     .shop-layout-flex {
@@ -151,5 +242,21 @@ body {
 @media (max-width: 600px) {
     .product-card-flex {
         flex: 1 1 100%; /* 1 item per row on mobile */
+    }
+}
+
+/* Mobile Responsiveness for About Page */
+@media (max-width: 900px) {
+    .about-layout-flex {
+        flex-direction: column; /* Stack image and text on mobile */
+    }
+    
+    .about-text-flex {
+        order: 2; /* Text appears below the image on mobile */
+    }
+    
+    .about-img-flex {
+        order: 1;
+        width: 100%;
     }
 }
