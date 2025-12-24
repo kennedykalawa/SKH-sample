@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SokoHub | Our Products</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav-menu">  
+                <img src="./sokohubimg/sokohub logo.jpg" alt="SokoHub Logo" class="logo-img">
+                <div class="nav-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./products.html" class="active">Our Products</a>
+                    <a href="./About.html">About Us</a>
+                    <a href="./Contact us.html">Contact Us</a>
+                </div>
+                <div id="buttons">
+                    <a href="./Register.html"><button id="up">Register</button></a>
+                    <a href="./Login&Signup/login.html"><button id="in">Sign In</button></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="first-s">
+            <h1>Explore Every Product You Need</h1>
+        </section>
+
+        <div class="shop-layout">
+            <aside class="sidebar">
+                <h3>Filter & Sort</h3>
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox"> Clothes</label>
+                    <label><input type="checkbox"> Gas</label>
+                    <label><input type="checkbox"> Food</label>
+                    <label><input type="checkbox"> Electronics</label>
+                    <label><input type="checkbox"> Others</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Condition</h4>
+                    <label><input type="radio" name="condition"> New</label>
+                    <label><input type="radio" name="condition"> Second Hand</label>
+                </div>
+
+                <button class="btn primary-btn" style="width: 100%;">Apply Filters</button>
+            </aside>
+
+            <div class="main-content">
+                <p>Showing <strong>4</strong> items | Sorted by: <strong>Newest</strong></p>
+                
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                             <img src="./sokohubimg/11.jpg" alt="Classic Apparel">
+                        </div>
+                        <div class="product-info">
+                            <h3>Clothes</h3>
+                            <p class="price">Ksh 1,500</p>
+                            <button class="buy-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-container">
+                             <img src="./sokohubimg/7.jpeg" alt="Local Gas">
+                        </div>
+                        <div class="product-info">
+                            <h3>Gas</h3>
+                            <p class="price">Ksh 1,100</p>
+                            <button class="buy-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-container">
+                             <img src="./sokohubimg/8.jpeg" alt="Electronics">
+                        </div>
+                        <div class="product-info">
+                            <h3>Electronics</h3>
+                            <p class="price">Ksh 1,950</p>
+                            <button class="buy-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="./sokohubimg/4.jpeg" alt="Organic Food">
+                        </div>
+                        <div class="product-info">
+                            <h3>Food</h3>
+                            <p class="price">Ksh 3,800</p>
+                            <button class="buy-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <a href="#">← Prev</a>
+                    <a href="#" class="active-page">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">Next →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
