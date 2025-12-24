@@ -39,6 +39,10 @@ body {
     font-weight: bold;
 }
 
+.nav-links a:hover {
+    color: #d8860b;
+}
+
 .logo-img {
     height: 45px;
 }
