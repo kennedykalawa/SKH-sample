@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SokoHub | Delivery Registration</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav-menu">  
+                <img src="./sokohubimg/sokohub logo.jpg" alt="SokoHub Logo" class="logo-img">
+                <div class="nav-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./products.html">Our Products</a>
+                    <a href="./About.html">About Us</a>
+                    <a href="./Contact us.html">Contact Us</a>
+                </div>
+                <div id="buttons">
+                    <a href="./Register.html"><button id="up">Register</button></a>
+                    <a href="./Login&Signup/login.html"><button id="in">Sign In</button></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="delivery-wrapper-flex">
+            <div class="delivery-card-flex">
+                <div class="delivery-header">
+                    <h1>Join the Fleet 🚚</h1>
+                    <p>Earn money on your own schedule as a SokoHub Delivery Partner.</p>
+                </div>
+
+                <form action="#" method="POST" class="flex-form-delivery">
+                    <div class="form-row-flex">
+                        <div class="input-group">
+                            <label for="full_name">Full Name:</label>
+                            <input type="text" id="full_name" name="full_name" required placeholder="John Doe">
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="0712345678">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="transport">Primary Transport Method:</label>
+                        <select id="transport" name="transport" required>
+                            <option value="" disabled selected>Select transport type</option>
+                            <option value="motorbike">Motorbike/Scooter</option>
+                            <option value="bicycle">Bicycle</option>
+                            <option value="car">Car/Van</option>
+                            <option value="foot">On Foot</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="license_id">Driver's License / ID Number:</label>
+                        <input type="text" id="license_id" name="license_id" required placeholder="12345678">
+                    </div>
+                    
+                    <div class="form-row-flex">
+                        <div class="input-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="confirm_password">Confirm Password:</label>
+                            <input type="password" id="confirm_password" name="confirm_password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="delivery-submit-btn">Register as Delivery Partner</button>
+                </form>
+
+                <div class="login-link">
+                    Already registered? <a href="./Login&Signup/login.html">Sign In here</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
