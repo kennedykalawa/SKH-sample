@@ -59,7 +59,7 @@ body {
 
 /* Flex Sidebar */
 .sidebar-flex {
-    flex: 0 0 250px; /* Fixed width of 250px, won't grow or shrink */
+    flex: 0 0 250px; 
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -74,24 +74,24 @@ body {
 
 /* Flex Product Content Area */
 .main-content-flex {
-    flex: 1; /* Takes up remaining space */
+    flex: 1; 
 }
 
 .product-feed-flex {
     display: flex;
-    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    flex-wrap: wrap; 
     gap: 20px;
 }
 
 /* Flex Product Card */
 .product-card-flex {
-    flex: 1 1 calc(33.333% - 20px); /* Basis of 33%, but grows and shrinks */
-    min-width: 250px; /* Ensures they don't get too small */
+    flex: 1 1 calc(33.333% - 20px); 
+    min-width: 250px; 
     background: white;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
-    flex-direction: column; /* Stack image and info vertically */
+    flex-direction: column; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -126,7 +126,7 @@ body {
 
 .buy-btn-flex {
     background-color: #32cd32;
-    margin-top: auto; /* Pushes button to the bottom of the card */
+    margin-top: auto; 
 }
 .btn-primary-flex:hover{
     background-color: #32cd32;
