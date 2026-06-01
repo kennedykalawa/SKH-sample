@@ -7,97 +7,124 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header-flex">
         <div class="container">
-            <nav class="nav-menu">  
+            <nav class="nav-menu-flex">
                 <img src="./sokohubimg/sokohub logo.jpg" alt="SokoHub Logo" class="logo-img">
-                <div class="nav-links">
+                <div class="menu-toggle-flex">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="nav-links-flex">
                     <a href="./index.html">Home</a>
                     <a href="./products.html" class="active">Our Products</a>
                     <a href="./About.html">About Us</a>
                     <a href="./Contact us.html">Contact Us</a>
                 </div>
-                <div id="buttons">
-                    <a href="./Register.html"><button id="up">Register</button></a>
-                    <a href="./Login&Signup/login.html"><button id="in">Sign In</button></a>
+                <div class="auth-buttons-flex">
+                    <a href="./Register.html"><button class="btn-up-flex">Register</button></a>
+                    <a href="./Login&Signup/login.html"><button class="btn-in-flex">Sign In</button></a>
                 </div>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section class="first-s">
-            <h1>Explore Every Product You Need</h1>
+        <section style="padding: 40px 0; text-align: center;">
+            <h1 style="color: var(--primary-color);">Explore Every Product You Need</h1>
         </section>
 
         <div class="shop-layout-flex">
             <aside class="sidebar-flex">
                 <h3>Filter & Sort</h3>
-                <div class="filter-group">
-                    <h4>Category</h4>
-                    <label><input type="checkbox"> Clothes</label>
-                    <label><input type="checkbox"> Gas</label>
-                    <label><input type="checkbox"> Food</label>
-                    <label><input type="checkbox"> Electronics</label>
+                <div class="flex-form-group" style="margin-top: 20px;">
+                    <label>Category</label>
+                    <label style="font-weight: normal;"><input type="checkbox"> Clothes</label>
+                    <label style="font-weight: normal;"><input type="checkbox"> Gas</label>
+                    <label style="font-weight: normal;"><input type="checkbox"> Food</label>
+                    <label style="font-weight: normal;"><input type="checkbox"> Electronics</label>
                 </div>
 
-                <div class="filter-group">
-                    <h4>Condition</h4>
-                    <label><input type="radio" name="condition"> New</label>
-                    <label><input type="radio" name="condition"> Second Hand</label>
+                <div class="flex-form-group">
+                    <label>Condition</label>
+                    <label style="font-weight: normal;"><input type="radio" name="condition"> New</label>
+                    <label style="font-weight: normal;"><input type="radio" name="condition"> Second Hand</label>
                 </div>
 
-                <button class="btn-primary-flex">Apply Filters</button>
+                <button class="btn-submit-flex" style="width: 100%;">Apply Filters</button>
             </aside>
 
             <div class="main-content-flex">
-                <div class="product-feed-flex">
-                    <div class="product-card-flex">
-                        <div class="img-wrapper">
+                <div class="grid-flex" style="padding: 0;">
+                    <div class="card-flex">
+                        <div class="card-img-container">
                              <img src="./sokohubimg/11.jpg" alt="Clothes">
                         </div>
-                        <div class="product-info-flex">
+                        <div class="card-info-flex">
                             <h3>Clothes</h3>
-                            <p class="price">Ksh 1,500</p>
-                            <button class="buy-btn-flex">Add to Cart</button>
+                            <p class="price-flex">Ksh 1,500</p>
+                            <button class="btn-submit-flex" style="width: 100%; margin-top: 15px;">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="product-card-flex">
-                        <div class="img-wrapper">
+                    <div class="card-flex">
+                        <div class="card-img-container">
                              <img src="./sokohubimg/7.jpeg" alt="Gas">
                         </div>
-                        <div class="product-info-flex">
+                        <div class="card-info-flex">
                             <h3>Gas</h3>
-                            <p class="price">Ksh 1,100</p>
-                            <button class="buy-btn-flex">Add to Cart</button>
+                            <p class="price-flex">Ksh 1,100</p>
+                            <button class="btn-submit-flex" style="width: 100%; margin-top: 15px;">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="product-card-flex">
-                        <div class="img-wrapper">
+                    <div class="card-flex">
+                        <div class="card-img-container">
                              <img src="./sokohubimg/8.jpeg" alt="Electronics">
                         </div>
-                        <div class="product-info-flex">
+                        <div class="card-info-flex">
                             <h3>Electronics</h3>
-                            <p class="price">Ksh 1,950</p>
-                            <button class="buy-btn-flex">Add to Cart</button>
+                            <p class="price-flex">Ksh 1,950</p>
+                            <button class="btn-submit-flex" style="width: 100%; margin-top: 15px;">Add to Cart</button>
                         </div>
                     </div>
 
-                    <div class="product-card-flex">
-                        <div class="img-wrapper">
+                    <div class="card-flex">
+                        <div class="card-img-container">
                             <img src="./sokohubimg/4.jpeg" alt="Food">
                         </div>
-                        <div class="product-info-flex">
+                        <div class="card-info-flex">
                             <h3>Food</h3>
-                            <p class="price">Ksh 3,800</p>
-                            <button class="buy-btn-flex">Add to Cart</button>
+                            <p class="price-flex">Ksh 3,800</p>
+                            <button class="btn-submit-flex" style="width: 100%; margin-top: 15px;">Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="footer-flex">
+        <div class="container">
+            <div class="footer-content-flex">
+                <div class="footer-section-flex">
+                    <h3>SokoHub</h3>
+                    <p>Empowering local businesses through digital trade. Join our growing community of traders and shoppers.</p>
+                </div>
+                <div class="footer-section-flex">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links-flex">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./products.html">Products</a></li>
+                        <li><a href="./About.html">About Us</a></li>
+                        <li><a href="./Contact us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-flex">
+                <p>&copy; 2026 SokoHub Marketplace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>

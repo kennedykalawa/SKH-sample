@@ -4,112 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SokoHub | Modern Marketplace</title>
-    <link rel="stylesheet" href="indexx.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <img src="./sokohubimg/sokohub logo.jpg" alt="SokoHub Logo" class="logo-img">
-            <div class="nav-links">
-                <a href="./index.html" class="active">Home</a>
-                <a href="./products.html">Our Products</a>
-                <a href="./About.html">About Us</a>
-                <a href="./Contact us.html">Contact Us</a>
-            </div>
-            <div id="buttons">
-                <a href="./Register.html"><button id="up">Register</button></a>
-                <a href="./Login&Signup/login.html"><button id="in">Sign In</button></a>
-            </div>
-        </div>
-    </nav>
+    <header class="header-flex">
+        <div class="container">
+            <nav class="nav-menu-flex">
+                <img src="./sokohubimg/sokohub logo.jpg" alt="SokoHub Logo" class="logo-img">
+                
+                <div class="menu-toggle-flex" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-    <section class="hero-s">
-        <div class="hero-content">
-            <h2>Welcome to SokoHub Marketplace</h2>
-            <p>Simple, fast & reliable trading for everyone.</p>
+                <div class="nav-links-flex">
+                    <a href="./index.html" class="active">Home</a>
+                    <a href="./products.html">Our Products</a>
+                    <a href="./About.html">About Us</a>
+                    <a href="./Contact us.html">Contact Us</a>
+                </div>
+
+                <div class="auth-buttons-flex">
+                    <a href="./Register.html"><button class="btn-up-flex">Register</button></a>
+                    <a href="./Login&Signup/login.html"><button class="btn-in-flex">Sign In</button></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-flex">
+        <h1>Welcome to SokoHub</h1>
+        <p>Simple, fast & reliable trading for everyone. Connect, trade, and grow together in our secure e-commerce platform.</p>
+        <div style="margin-top: 20px;">
+            <a href="./products.html"><button class="btn-up-flex" style="padding: 12px 30px;">Start Shopping</button></a>
         </div>
     </section>
 
     <main class="container">
-        <section class="shopping-intro">
-            <p>SokoHub is a secure e-commerce platform where you can sell, buy, and get products delivered instantly. Let’s connect, trade, and grow together.</p>
-        </section>
-
-        <section class="product-grid">
-            <div class="product-card">
-                <div class="product-image-container">
+        <section class="grid-flex">
+            <div class="card-flex">
+                <div class="card-img-container">
                     <img src="./sokohubimg/7.jpeg" alt="Gas Tank">
                 </div>
-                <div class="product-info">
+                <div class="card-info-flex">
                     <h3>Local Gas</h3>
-                    <h4>33% OFF</h4>
-                    <p class="price">
-                        <span class="sale-price">Ksh 1,200</span>
-                        <span class="original-price">Ksh 1,800</span>
-                    </p>
+                    <p class="price-flex">Ksh 1,200 <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">Ksh 1,800</span></p>
+                    <button class="btn-submit-flex" style="width: 100%; margin-top: 15px;">Add to Cart</button>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-image-container">
+            <div class="card-flex">
+                <div class="card-img-container">
                     <img src="./sokohubimg/8.jpeg" alt="Electronics">
                 </div>
-                <div class="product-info">
+                <div class="card-info-flex">
                     <h3>Electronics</h3>
-                    <h4>25% OFF</h4>
-                    <p class="price">
-                        <span class="sale-price">Ksh 2,625</span>
-                        <span class="original-price">Ksh 3,500</span>
-                    </p>
+                    <p class="price-flex">Ksh 2,625 <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">Ksh 3,500</span></p>
+                    <button class="btn-submit-flex" style="width: 100%; margin-top: 15px;">Add to Cart</button>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-image-container">
+            <div class="card-flex">
+                <div class="card-img-container">
                     <img src="./sokohubimg/11.jpg" alt="Clothes">
                 </div>
-                <div class="product-info">
+                <div class="card-info-flex">
                     <h3>Classic Apparel</h3>
-                    <h4>40% OFF</h4>
-                    <p class="price">
-                        <span class="sale-price">Ksh 4,500</span>
-                        <span class="original-price">Ksh 7,500</span>
-                    </p>
+                    <p class="price-flex">Ksh 4,500 <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">Ksh 7,500</span></p>
+                    <button class="btn-submit-flex" style="width: 100%; margin-top: 15px;">Add to Cart</button>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-image-container">
+            <div class="card-flex">
+                <div class="card-img-container">
                     <img src="./sokohubimg/4.jpeg" alt="Organic Food">
                 </div>
-                <div class="product-info">
+                <div class="card-info-flex">
                     <h3>Organic Food</h3>
-                    <h4>50% OFF</h4>
-                    <p class="price">
-                        <span class="sale-price">Ksh 1,400</span>
-                        <span class="original-price">Ksh 2,000</span>
-                    </p>
+                    <p class="price-flex">Ksh 1,400 <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">Ksh 2,000</span></p>
+                    <button class="btn-submit-flex" style="width: 100%; margin-top: 15px;">Add to Cart</button>
                 </div>
             </div>
         </section>
 
-        <section class="value-prop">
-            <h2>Why Choose SokoHub?</h2>
-            <div class="prop-grid">
-                <div class="prop-item">
-                    <h3>Instant Delivery</h3>
+        <section style="text-align: center; padding: 60px 0; background-color: #fff; border-radius: 15px; margin: 40px 0;">
+            <h2 style="color: #32cd32; margin-bottom: 30px;">Why Choose SokoHub?</h2>
+            <div class="grid-flex" style="padding: 0 20px;">
+                <div>
+                    <h3 style="color: #d8860b;">Instant Delivery</h3>
                     <p>Real-time order tracking ensures you are always informed about your purchase status.</p>
                 </div>
-                <div class="prop-item">
-                    <h3>Secure Payment</h3>
+                <div>
+                    <h3 style="color: #d8860b;">Secure Payment</h3>
                     <p>Pay safely via M-Pesa, PayPal, or Bank Cards with SSL encryption.</p>
                 </div>
-                <div class="prop-item">
-                    <h3>Trusted Reviews</h3>
+                <div>
+                    <h3 style="color: #d8860b;">Trusted Reviews</h3>
                     <p>Foster transparency with verified customer reviews and seller insights.</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer-flex">
+        <div class="container">
+            <div class="footer-content-flex">
+                <div class="footer-section-flex">
+                    <h3>SokoHub</h3>
+                    <p>Empowering local businesses through digital trade. Join our growing community of traders and shoppers.</p>
+                </div>
+                <div class="footer-section-flex">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links-flex">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./products.html">Products</a></li>
+                        <li><a href="./About.html">About Us</a></li>
+                        <li><a href="./Contact us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section-flex">
+                    <h3>Account</h3>
+                    <ul class="footer-links-flex">
+                        <li><a href="./Register.html">Register</a></li>
+                        <li><a href="./Login&Signup/login.html">Sign In</a></li>
+                        <li><a href="./sellers.page.html">Sell on SokoHub</a></li>
+                        <li><a href="./delivery.html">Join Delivery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-flex">
+                <p>&copy; 2026 SokoHub Marketplace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

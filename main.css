@@ -1,3 +1,23 @@
+/* 
+    SokoHub | Main Stylesheet
+    Author: SokoHub Team
+    Style Convention: Flexbox-centric with '-flex' suffix naming.
+    Colors: LimeGreen (#32cd32), SokoHub Gold (#d8860b)
+*/
+
+/* --- Global Variables --- */
+:root {
+    --primary-color: #32cd32;
+    --accent-color: #d8860b;
+    --bg-light: #f9f9f9;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* --- Reset & Base Styles --- */
 * {
     margin: 0;
     padding: 0;
@@ -5,54 +25,73 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
 }
 
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Flex Navigation */
-.header {
-    background-color: #32cd32;
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* --- Navigation --- */
+.header-flex {
+    background-color: var(--primary-color);
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.nav-menu {
+.nav-menu-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.nav-links {
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links-flex {
     display: flex;
     gap: 20px;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.nav-links-flex a {
+    color: var(--white);
+    font-weight: 600;
 }
 
-.nav-links a:hover {
-    color: #d8860b;
+.nav-links-flex a:hover,
+.nav-links-flex a.active {
+    color: var(--accent-color);
 }
 
-.logo-img {
-    height: 45px;
-}
-
-#buttons {
+/* Auth Buttons */
+.auth-buttons-flex {
     display: flex;
     gap: 10px;
 }
 
-#up, #in {
+.btn-up-flex, .btn-in-flex {
     padding: 8px 20px;
     border-radius: 20px;
     border: none;
@@ -61,530 +100,248 @@ body {
     transition: transform 0.2s ease;
 }
 
-#up { background-color: #d8860b; color: white; }
-#in { background-color: white; color: #32cd32; }
+.btn-up-flex { background-color: var(--accent-color); color: var(--white); }
+.btn-in-flex { background-color: var(--white); color: var(--primary-color); }
 
-#up:hover, #in:hover { transform: scale(1.1); }
+.btn-up-flex:hover, .btn-in-flex:hover { transform: scale(1.1); }
 
-/* Flex Layout Main */
-.shop-layout-flex {
-    display: flex;
-    gap: 30px;
-    margin-top: 40px;
-    align-items: flex-start;
-    height: 20vh;
+/* Mobile Menu Toggle (JS will use this) */
+.menu-toggle-flex {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
-/* Flex Sidebar */
-.sidebar-flex {
-    flex: 0 0 250px; 
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
+.menu-toggle-flex span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 2px;
 }
 
-.filter-group{
+/* --- Hero Sections --- */
+.hero-flex {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-hero-bg.jpg');
+    background-color: #222;
+    height: 400px;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
 }
 
+.hero-flex h1 { font-size: 3rem; margin-bottom: 15px; }
+.hero-flex p { font-size: 1.2rem; max-width: 600px; }
 
-/* Flex Product Content Area */
-.main-content-flex {
-    flex: 1; 
-}
-
-.product-feed-flex {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 20px;
-}
-
-/* Flex Product Card */
-.product-card-flex {
-    flex: 1 1 calc(33.333% - 20px); 
-    min-width: 250px; 
-    background: white;
+/* --- Component Cards --- */
+.card-flex {
+    background: var(--white);
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
     display: flex;
-    flex-direction: column; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-direction: column;
 }
 
-.img-wrapper {
-    height: 200px;
+.card-flex:hover {
+    transform: translateY(-5px);
 }
 
-.img-wrapper img {
+.card-img-container {
+    height: 250px;
+}
+
+.card-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.product-info-flex {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-}
-
-/* Buttons */
-.btn-primary-flex, .buy-btn-flex {
-    background-color: #d8860b;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.buy-btn-flex {
-    background-color: #32cd32;
-    margin-top: auto; 
-}
-.btn-primary-flex:hover{
-    background-color: #32cd32;
-}
-
-/* About Page Specific Flexbox Styles */
-
-.about-hero-flex {
-    text-align: center;
-    padding: 60px 0 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about-hero-flex h1 {
-    font-size: 2.5rem;
-    color: #32cd32; /* LimeGreen from your theme */
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: #d8860b; /* Orange accent */
-    font-weight: 600;
-}
-
-.about-layout-flex {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 60px;
-}
-
-.about-text-flex {
-    flex: 1.2; /* Takes slightly more space for readability */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.values-flex {
-    background-color: #f0fdf0; /* Very light green background */
+.card-info-flex {
     padding: 20px;
-    border-left: 5px solid #32cd32;
-    border-radius: 5px;
-}
-
-.values-flex h3 {
-    color: #32cd32;
-    margin-bottom: 10px;
-}
-
-.values-flex ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.values-flex li {
-    padding: 8px 0;
-    position: relative;
-    padding-left: 20px;
-}
-
-.values-flex li::before {
-    content: "✔";
-    color: #d8860b;
-    position: absolute;
-    left: 0;
-}
-
-.about-img-flex {
-    flex: 0.8;
-}
-
-.responsive-img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* Contact Page Flexbox Styles */
-
-.contact-hero-flex {
     text-align: center;
+}
+
+.card-info-flex h3 { color: var(--primary-color); margin-bottom: 10px; }
+.card-info-flex .price-flex { font-weight: bold; font-size: 1.2rem; }
+
+/* --- Layout Grids --- */
+.grid-flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.contact-hero-flex h1 {
-    color: limegreen;
-    font-size: 2.5rem;
-}
-
-.contact-wrapper-flex {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 60px;
-    align-items: flex-start;
-}
-
-.contact-form-container {
-    flex: 2; /* Form takes more space */
-    background: white;
+/* --- Form Elements --- */
+.form-container-flex {
+    background: var(--white);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow);
 }
 
-.flex-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.form-group input, .form-group textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.form-group input:focus {
-    border-color: #d8860b;
-    outline: none;
-}
-
-.submit-btn-flex {
-    background-color: limegreen;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.submit-btn-flex:hover {
-    background-color: #d8860b;
-}
-
-.contact-info-flex {
-    flex: 1; /* Sidebar takes less space */
-    position: sticky;
-    top: 100px;
-}
-
-.info-card {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    border-top: 5px solid #d8860b;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.info-card h2 {
-    color: #d8860b;
-    margin-bottom: 15px;
-}
-
-.info-card p {
-    margin-bottom: 10px;
-}
-
-.info-card a {
-    color: limegreen;
-    font-weight: 600;
-}
-
-/* Registration Page Flexbox Styles */
-
-.register-wrapper-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-    min-height: calc(100vh - 150px);
-}
-
-.register-card-flex {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    max-width: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-}
-
-.register-header-flex h2 {
-    color: #d8860b; /* SokoHub Orange-Gold */
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
-
-.register-header-flex p {
-    color: #666;
-    font-weight: 500;
-}
-
-.role-selection-flex {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.role-btn-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    background-color: #32cd32; /* LimeGreen */
-    color: white;
-    padding: 18px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.role-btn-flex:hover {
-    background-color: #d8860b;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(216, 134, 11, 0.3);
-}
-
-.role-btn-flex .icon {
-    font-size: 1.5rem;
-}
-
-.home-return-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.home-circle-btn {
-    width: 60px;
-    height: 60px;
-    background-color: #32cd32;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.home-circle-btn:hover {
-    background-color: #d8860b;
-}
-
-/* Delivery Page Flexbox Styles */
-
-.delivery-wrapper-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-    min-height: 80vh;
-}
-
-.delivery-card-flex {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 650px;
-    width: 100%;
-}
-
-.delivery-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.delivery-header h1 {
-    color: #32cd32; /* LimeGreen */
-    margin-bottom: 10px;
-}
-
-.flex-form-delivery {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-row-flex {
-    display: flex;
-    gap: 20px;
-}
-
-.input-group {
-    flex: 1;
+.flex-form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 20px;
 }
 
-.input-group input, 
-.input-group select {
+.flex-form-group label { font-weight: 600; }
+
+.flex-form-group input, 
+.flex-form-group textarea, 
+.flex-form-group select {
     padding: 12px;
-    border: 1.5px solid #eee;
-    border-radius: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     font-size: 1rem;
-    transition: border-color 0.3s;
+    transition: var(--transition);
 }
 
-.input-group input:focus {
-    border-color: #32cd32;
+.flex-form-group input:focus {
+    border-color: var(--primary-color);
     outline: none;
 }
 
-.delivery-submit-btn {
-    background-color: #d8860b; /* SokoHub Gold/Orange */
-    color: white;
+.btn-submit-flex {
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
+    transition: var(--transition);
 }
 
-.delivery-submit-btn:hover {
-    background-color: #32cd32;
-    transform: translateY(-2px);
+.btn-submit-flex:hover {
+    background-color: var(--accent-color);
 }
 
-.login-link {
+/* --- Footer --- */
+.footer-flex {
+    background-color: #222;
+    color: var(--white);
+    padding: 60px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-section-flex {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section-flex h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.footer-links-flex {
+    list-style: none;
+}
+
+.footer-links-flex li {
+    margin-bottom: 10px;
+}
+
+.footer-links-flex a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom-flex {
     text-align: center;
-    margin-top: 20px;
-    color: #666;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #888;
 }
 
-.login-link a {
-    color: #32cd32;
-    font-weight: bold;
+/* --- About & Contact Specifics --- */
+.layout-split-flex {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 60px 0;
 }
 
+.layout-text-flex { flex: 1.2; }
+.layout-img-flex { flex: 0.8; }
 
+.values-box-flex {
+    background-color: #f0fdf0;
+    padding: 25px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+    margin: 20px 0;
+}
 
+/* --- Product Page Specifics --- */
+.shop-layout-flex {
+    display: flex;
+    gap: 30px;
+    padding: 40px 0;
+}
 
-/* Mobile Responsive */
-@media (max-width: 850px) {
-    .contact-wrapper-flex {
+.sidebar-flex {
+    flex: 0 0 250px;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.main-content-flex { flex: 1; }
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 900px) {
+    .nav-links-flex {
+        display: none; /* JS will toggle this */
+        width: 100%;
+        flex-direction: column;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav-links-flex.active {
+        display: flex;
+    }
+
+    .menu-toggle-flex {
+        display: flex;
+    }
+
+    .layout-split-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .shop-layout-flex {
         flex-direction: column;
     }
-    
-    .contact-info-flex {
-        width: 100%;
-        position: static;
-    }
-}
 
-/* Responsive Flex  for products page*/
-@media (max-width: 900px) {
-    .shop-layout-flex {
-        flex-direction: column; /* Stacks sidebar on top of products */
-    }
-    
     .sidebar-flex {
         width: 100%;
         flex: none;
     }
-
-    .product-card-flex {
-        flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
-    }
 }
 
 @media (max-width: 600px) {
-    .product-card-flex {
-        flex: 1 1 100%; /* 1 item per row on mobile */
-    }
-}
-
-/* Mobile Responsiveness for About Page */
-@media (max-width: 900px) {
-    .about-layout-flex {
-        flex-direction: column; /* Stack image and text on mobile */
-    }
-    
-    .about-text-flex {
-        order: 2; /* Text appears below the image on mobile */
-    }
-    
-    .about-img-flex {
-        order: 1;
-        width: 100%;
-    }
-}
-/* Mobile Responsive for contact us page*/
-@media (max-width: 850px) {
-    .contact-wrapper-flex {
-        flex-direction: column;
-    }
-    
-    .contact-info-flex {
-        width: 100%;
-        position: static;
-    }
-}
-/* Mobile Adjustments for register page*/
-@media (max-width: 480px) {
-    .register-card-flex {
-        padding: 25px;
-    }
-    .register-header-flex h2 {
-        font-size: 1.8rem;
-    }
-}
-
-/* Mobile Responsiveness  for delivery page*/
-@media (max-width: 600px) {
-    .form-row-flex {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .delivery-card-flex {
-        padding: 25px;
-    }
+    .hero-flex h1 { font-size: 2.2rem; }
+    .auth-buttons-flex { display: none; } /* Hide in small mobile to save space */
 }

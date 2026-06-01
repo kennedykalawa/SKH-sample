@@ -7,53 +7,59 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header-flex">
         <div class="container">
-            <nav class="nav-menu">  
+            <nav class="nav-menu-flex">  
                 <img src="./sokohubimg/sokohub logo.jpg" alt="SokoHub Logo" class="logo-img">
-                <div class="nav-links">
+                <div class="menu-toggle-flex">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="nav-links-flex">
                     <a href="./index.html">Home</a>
                     <a href="./products.html">Our Products</a>
                     <a href="./About.html">About Us</a>
                     <a href="./Contact us.html">Contact Us</a>
                 </div>
-                <div id="buttons">
-                    <a href="./Register.html" class="active"><button id="up">Register</button></a>
-                    <a href="./Login&Signup/login.html"><button id="in">Sign In</button></a>
+                <div class="auth-buttons-flex">
+                    <a href="./Register.html" class="active"><button class="btn-up-flex">Register</button></a>
+                    <a href="./Login&Signup/login.html"><button class="btn-in-flex">Sign In</button></a>
                 </div>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <div class="register-wrapper-flex">
-            <div class="register-card-flex">
-                <div class="register-header-flex">
-                    <h2>Welcome to SokoHub</h2>
-                    <p>We're very happy to have you! Choose how you want to join us:</p>
-                </div>
+        <div style="display: flex; justify-content: center; align-items: center; padding: 60px 0; min-height: 70vh;">
+            <div class="form-container-flex" style="max-width: 500px; width: 100%; text-align: center;">
+                <h2 style="color: var(--accent-color); font-size: 2.2rem; margin-bottom: 10px;">Welcome to SokoHub</h2>
+                <p style="color: var(--text-light); margin-bottom: 30px;">Choose how you want to join our community:</p>
                 
-                <div class="role-selection-flex">
-                    <a href="./sellers.page.html" class="role-btn-flex">
-                        <span class="icon">🏪</span>
-                        <span>Seller</span>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="./sellers.page.html" class="btn-submit-flex" style="display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.2rem; padding: 18px;">
+                        <span>🏪</span> Seller
                     </a>
-                    <a href="./Login&Signup/sign up.html" class="role-btn-flex">
-                        <span class="icon">🛍️</span>
-                        <span>Buyer / Customer</span>
+                    <a href="./Login&Signup/sign up.html" class="btn-submit-flex" style="display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.2rem; padding: 18px;">
+                        <span>🛍️</span> Buyer / Customer
                     </a>
-                    <a href="./delivery.html" class="role-btn-flex">
-                        <span class="icon">🚚</span>
-                        <span>Delivery Personnel</span>
+                    <a href="./delivery.html" class="btn-submit-flex" style="display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.2rem; padding: 18px;">
+                        <span>🚚</span> Delivery Partner
                     </a>
                 </div>
 
-                <div class="home-return-flex">
-                    <a href="./index.html" class="home-circle-btn">🏠</a>
-                    <p>Back to Home</p>
+                <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+                    <a href="./index.html" style="color: var(--primary-color); font-weight: bold;">🏠 Back to Home</a>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="footer-flex">
+        <div class="container">
+            <div class="footer-bottom-flex">
+                <p>&copy; 2026 SokoHub Marketplace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>

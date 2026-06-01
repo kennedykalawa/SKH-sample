@@ -7,45 +7,48 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header-flex">
         <div class="container">
-            <nav class="nav-menu">  
+            <nav class="nav-menu-flex">  
                 <img src="./sokohubimg/sokohub logo.jpg" alt="SokoHub Logo" class="logo-img">
-                <div class="nav-links">
+                <div class="menu-toggle-flex">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="nav-links-flex">
                     <a href="./index.html">Home</a>
                     <a href="./products.html">Our Products</a>
                     <a href="./About.html">About Us</a>
                     <a href="./Contact us.html">Contact Us</a>
                 </div>
-                <div id="buttons">
-                    <a href="./Register.html"><button id="up">Register</button></a>
-                    <a href="./Login&Signup/login.html"><button id="in">Sign In</button></a>
+                <div class="auth-buttons-flex">
+                    <a href="./Register.html"><button class="btn-up-flex">Register</button></a>
+                    <a href="./Login&Signup/login.html"><button class="btn-in-flex">Sign In</button></a>
                 </div>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <div class="delivery-wrapper-flex">
-            <div class="delivery-card-flex">
-                <div class="delivery-header">
-                    <h1>Join the Fleet 🚚</h1>
-                    <p>Earn money on your own schedule as a SokoHub Delivery Partner.</p>
+        <div style="display: flex; justify-content: center; align-items: center; padding: 60px 0;">
+            <div class="form-container-flex" style="max-width: 650px; width: 100%;">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h1 style="color: var(--primary-color); margin-bottom: 10px;">Join the Fleet 🚚</h1>
+                    <p style="color: var(--text-light);">Earn money on your own schedule as a SokoHub Delivery Partner.</p>
                 </div>
 
-                <form action="#" method="POST" class="flex-form-delivery">
-                    <div class="form-row-flex">
-                        <div class="input-group">
+                <form action="#" method="POST">
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                        <div class="flex-form-group" style="flex: 1; min-width: 250px; margin-bottom: 0;">
                             <label for="full_name">Full Name:</label>
                             <input type="text" id="full_name" name="full_name" required placeholder="John Doe">
                         </div>
-                        <div class="input-group">
+                        <div class="flex-form-group" style="flex: 1; min-width: 250px; margin-bottom: 0;">
                             <label for="phone">Phone Number:</label>
                             <input type="tel" id="phone" name="phone" required placeholder="0712345678">
                         </div>
                     </div>
 
-                    <div class="input-group">
+                    <div class="flex-form-group">
                         <label for="transport">Primary Transport Method:</label>
                         <select id="transport" name="transport" required>
                             <option value="" disabled selected>Select transport type</option>
@@ -56,30 +59,39 @@
                         </select>
                     </div>
 
-                    <div class="input-group">
+                    <div class="flex-form-group">
                         <label for="license_id">Driver's License / ID Number:</label>
                         <input type="text" id="license_id" name="license_id" required placeholder="12345678">
                     </div>
                     
-                    <div class="form-row-flex">
-                        <div class="input-group">
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                        <div class="flex-form-group" style="flex: 1; min-width: 250px; margin-bottom: 0;">
                             <label for="password">Password:</label>
                             <input type="password" id="password" name="password" required>
                         </div>
-                        <div class="input-group">
+                        <div class="flex-form-group" style="flex: 1; min-width: 250px; margin-bottom: 0;">
                             <label for="confirm_password">Confirm Password:</label>
                             <input type="password" id="confirm_password" name="confirm_password" required>
                         </div>
                     </div>
 
-                    <button type="submit" class="delivery-submit-btn">Register as Delivery Partner</button>
+                    <button type="submit" class="btn-submit-flex" style="width: 100%; margin-top: 20px;">Register as Delivery Partner</button>
                 </form>
 
-                <div class="login-link">
-                    Already registered? <a href="./Login&Signup/login.html">Sign In here</a>
+                <div style="text-align: center; margin-top: 30px; color: var(--text-light);">
+                    Already registered? <a href="./Login&Signup/login.html" style="color: var(--primary-color); font-weight: bold;">Sign In here</a>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="footer-flex">
+        <div class="container">
+            <div class="footer-bottom-flex">
+                <p>&copy; 2026 SokoHub Marketplace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
